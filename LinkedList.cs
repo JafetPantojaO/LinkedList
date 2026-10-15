@@ -136,15 +136,13 @@ namespace ListsDev
             }
             else
             {
-                Node current = first;
-
-                for(int i = 0; i < index -1; i++)
+                for(int i = 0; i < index; i++)
                 {
                     current = current.Next;
-
                 }
 
-                current.Next = new Node(element);
+                current = new Node(element);
+                Node.next = 
 
 
             }
