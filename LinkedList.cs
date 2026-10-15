@@ -29,7 +29,10 @@ namespace ListsDev
 
         public bool Empty => first == null;
 
-        public T this[int index] { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public T this[int index] { 
+            get => Get(index);                                                                                                 
+            set => Set(index, value);   
+        }
 
         public LinkedList()
         {
@@ -80,17 +83,48 @@ namespace ListsDev
 
         public T Get(int index)
         {
-            throw new NotImplementedException();
+            if(index < 0 || index >= Size)
+            {
+                throw new IndexOutOfRangeException();           
+            }
+
+            else
+            {
+                Node current = first;
+                for(int i = 0; i < index; i++)
+                {
+                    current = current.Next;
+                }  
+                return current.Element;
+            }
         }
 
         public void Set(int index, T element)
         {
-            throw new NotImplementedException();
+            if(index < 0 || index >= Size)
+            {
+                throw new IndexOutOfRangeException();           
+            }
+            else
+            {
+                Node current = first;
+                for(int i = 0; i < index; i++)
+                {
+                    current = current.Next;
+                }                  
+                current.Next = new Node(element);
+                Size++;     
+            }
         }
 
         public void AddAll(T first, params T[] elements)
         {
-            throw new NotImplementedException();
+            Add(first);
+
+            foreach (T e in elements)
+            {
+                Add(e);
+            }
         }
 
         public void Insert(int index, T element)
