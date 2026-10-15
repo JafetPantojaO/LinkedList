@@ -1,0 +1,15 @@
+/Users/phoneservicemid/Desktop/LinkedList/obj/Debug/net10.0/LinkedList.GeneratedMSBuildEditorConfig.editorconfig
+/Users/phoneservicemid/Desktop/LinkedList/obj/Debug/net10.0/LinkedList.AssemblyInfoInputs.cache
+/Users/phoneservicemid/Desktop/LinkedList/obj/Debug/net10.0/LinkedList.AssemblyInfo.cs
+/Users/phoneservicemid/Desktop/LinkedList/obj/Debug/net10.0/LinkedList.csproj.CoreCompileInputs.cache
+/Users/phoneservicemid/Desktop/LinkedList/obj/Debug/net10.0/LinkedList.sourcelink.json
+/Users/phoneservicemid/Desktop/LinkedList/bin/Debug/net10.0/LinkedList
+/Users/phoneservicemid/Desktop/LinkedList/bin/Debug/net10.0/LinkedList.deps.json
+/Users/phoneservicemid/Desktop/LinkedList/bin/Debug/net10.0/LinkedList.runtimeconfig.json
+/Users/phoneservicemid/Desktop/LinkedList/bin/Debug/net10.0/LinkedList.dll
+/Users/phoneservicemid/Desktop/LinkedList/bin/Debug/net10.0/LinkedList.pdb
+/Users/phoneservicemid/Desktop/LinkedList/obj/Debug/net10.0/LinkedList.dll
+/Users/phoneservicemid/Desktop/LinkedList/obj/Debug/net10.0/refint/LinkedList.dll
+/Users/phoneservicemid/Desktop/LinkedList/obj/Debug/net10.0/LinkedList.pdb
+/Users/phoneservicemid/Desktop/LinkedList/obj/Debug/net10.0/LinkedList.genruntimeconfig.cache
+/Users/phoneservicemid/Desktop/LinkedList/obj/Debug/net10.0/ref/LinkedList.dll
