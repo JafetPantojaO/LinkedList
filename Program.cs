@@ -15,6 +15,8 @@ namespace ListsDev
 
             LinkedList<int> list = new LinkedList<int>();
 
+            /*
+
             list.Add(10);
             list.Add(-4);
             list.Add(5);
@@ -22,7 +24,10 @@ namespace ListsDev
             list.Add(10);
             list.Add(-36);
 
-           // list.AddAll(100, 200, 300, 400, 500);
+            */
+
+
+            list.AddAll(100, 200, 300, 400, 500);
 
             // list[4] = -360;
 

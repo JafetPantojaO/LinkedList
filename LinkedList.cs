@@ -129,7 +129,26 @@ namespace ListsDev
 
         public void Insert(int index, T element)
         {
-            throw new NotImplementedException();
+
+            if(index < 0 || index >= Size)
+            {
+                throw new NotImplementedException();
+            }
+            else
+            {
+                Node current = first;
+
+                for(int i = 0; i < index -1; i++)
+                {
+                    current = current.Next;
+
+                }
+
+                current.Next = new Node(element);
+
+
+            }
+
         }
 
         public void RemoveAt(int index)
