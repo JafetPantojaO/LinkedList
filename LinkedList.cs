@@ -158,33 +158,103 @@ namespace ListsDev
 
         public void RemoveAt(int index)
         {
-            throw new NotImplementedException();
+            // Primero reviso que el índice tenga sentido.
+            // Si es negativo o se pasa del tamaño, no hay nada que borrar.
+            if (index < 0 || index >= Size)
+            {
+                throw new ArgumentOutOfRangeException(nameof(index));
+            }
+
+            //Caso 1: quieren borrar el primero.
+            if (index == 0)
+            {
+                first = first.Next;
+            }
+            else
+            {
+                //Caso 2: borrar uno del medio o el último.
+
+                Node previous = first;
+                for (int i = 0; i < index - 1; i++)
+                {
+                    previous = previous.Next;
+                }
+
+                Node current = previous.Next;
+                previous.Next = current.Next;
+
+
+                current.Next = null;
+                current.Element = default;
+            }
+
+            Size--;
         }
 
         public void Clear()
         {
-            throw new NotImplementedException();
+            first = null;
+            Size = 0;
         }
 
         public bool Contains(T element)
         {
-            throw new NotImplementedException();
+            EqualityComparer<T> comparer = EqualityComparer<T>.Default;
+            Node current = first;
+            while (current != null)
+            {
+                if (comparer.Equals(current.Element, element))
+                {
+                    return true;
+                }
+                current = current.Next;
+            }
+            return false;
         }
 
         public bool All(Predicate<T> condition)
         {
-            throw new NotImplementedException();
+            Node current = first;
+            while (current != null)
+            {
+                if (!condition(current.Element))
+                {
+                    return false;
+                }
+                current = current.Next;
+            }
+            return true;
         }
 
         public bool Any(Predicate<T> condition)
         {
-            throw new NotImplementedException();
+            Node current = first;
+            while (current != null)
+            {
+                if (condition(current.Element))
+                {
+                    return true;
+                }
+                current = current.Next;
+            }
+            return false;
         }
 
         public int Count(Predicate<T> condition)
         {
-            throw new NotImplementedException();
+            int count = 0;
+            Node current = first;
+            while (current != null)
+            {
+                if (condition(current.Element))
+                {
+                    count++;
+                }
+                current = current.Next;
+            }
+            return count;
         }
+        
 
         public T Find(Predicate<T> match)
         {
