@@ -29,7 +29,7 @@ namespace ListsDev
 
             list.AddAll(100, 200, 300, 400, 500);
 
-            // list[4] = -360;
+            list.Insert(5, 20);
 
             Write("\n[");
             for (int i = 0; i < list.Size; i++)

@@ -129,24 +129,31 @@ namespace ListsDev
 
         public void Insert(int index, T element)
         {
-
-            if(index < 0 || index >= Size)
+            if (index < 0 || index > Size)
             {
-                throw new NotImplementedException();
+                throw new IndexOutOfRangeException();
+            }
+
+            if (index == 0)
+            {
+                Node newNode = new Node(element);
+                newNode.Next = first;
+                first = newNode;
             }
             else
             {
-                for(int i = 0; i < index; i++)
+                Node current = first;
+                for (int i = 0; i < index - 1; i++)
                 {
                     current = current.Next;
                 }
 
-                current = new Node(element);
-                Node.next = 
-
-
+                Node newNode = new Node(element);
+                newNode.Next = current.Next;
+                current.Next = newNode;
             }
 
+            Size++;
         }
 
         public void RemoveAt(int index)
